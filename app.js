@@ -15,6 +15,7 @@ app.use((req, res, next)=>{
         res.header('Access-Control-Allow-Methods','GET, PUT, PATCH, POST, DELETE')
         return res.status(200).json({})
    }
+   next()
 })
 
 app.use('/api/notes', require('./routes/notes.routes'))
